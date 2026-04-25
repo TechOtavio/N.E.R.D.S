@@ -1,0 +1,20 @@
+<svg width="1400" height="440" viewBox="0 0 1400 440" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1400" height="440" fill="#0A192F"/>
+  <g opacity="0.35">
+    <path d="M0 88H1400" stroke="#63F7FF" stroke-width="1"/>
+    <path d="M0 176H1400" stroke="#63F7FF" stroke-width="1"/>
+    <path d="M0 264H1400" stroke="#63F7FF" stroke-width="1"/>
+    <path d="M0 352H1400" stroke="#63F7FF" stroke-width="1"/>
+    <path d="M233 0V440" stroke="#63F7FF" stroke-width="1"/>
+    <path d="M466 0V440" stroke="#63F7FF" stroke-width="1"/>
+    <path d="M700 0V440" stroke="#63F7FF" stroke-width="1"/>
+    <path d="M933 0V440" stroke="#63F7FF" stroke-width="1"/>
+    <path d="M1166 0V440" stroke="#63F7FF" stroke-width="1"/>
+  </g>
+  <circle cx="220" cy="220" r="52" fill="#63F7FF" fill-opacity="0.18"/>
+  <circle cx="700" cy="220" r="90" fill="#6C3CD0" fill-opacity="0.16"/>
+  <circle cx="1180" cy="220" r="62" fill="#63F7FF" fill-opacity="0.18"/>
+  <text x="700" y="234" text-anchor="middle" fill="#63F7FF" font-size="34" font-family="Inter, Arial, sans-serif">
+    N.E.R.D.S. CORE TEAM
+  </text>
+</svg>
