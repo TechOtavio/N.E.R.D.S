@@ -254,3 +254,9 @@ body {
     opacity: 1 !important;
   }
 }
+
+/* Inputs Formulario */
+.custom-input::placeholder {
+  color: rgba(255, 255, 255, 0.8) !important;
+  opacity: 1; /* Firefox necessita desta propriedade para placeholders */
+}
