@@ -1,0 +1,15 @@
+Atue somente com a stack oficial: React + Vite + TypeScript + React-Bootstrap + SCSS.
+Antes de qualquer alteração, leia obrigatoriamente todos os arquivos em /docs.
+Considere /docs como Fonte da Verdade; se houver conflito, siga /docs.
+Não use Tailwind, CSS-in-JS, styled-components ou libs fora do padrão sem autorização explícita.
+Não use estilos inline, exceto quando tecnicamente indispensável e documentado.
+Mantenha componentes reutilizáveis em /src/components e blocos de página em /src/sections.
+Centralize tokens visuais e regras globais em /src/styles.
+Preserve identidade visual cyber-tech dark (fundo #0b1326 e destaque #63f7ff).
+Evite duplicação de código; prefira mapeamento de dados e componentização.
+Tipe todas as props e estruturas com TypeScript; não use any.
+Não quebrar lint/build; valide com npm run lint e npm run build após mudanças relevantes.
+Não remover ou alterar requisitos de acessibilidade visual (contraste, foco, legibilidade).
+Qualquer decisão arquitetural nova deve atualizar a documentação em /docs.
+Escreva código limpo, simples e de fácil manutenção.
+Em dúvida, priorize consistência com PRODUCT.md, ARCHITECTURE.md e DESIGN_SYSTEM.md.
