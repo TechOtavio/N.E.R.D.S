@@ -96,7 +96,14 @@ function Header() {
               </Nav.Link>
             ))}
           </Nav>
-          <Button variant="outline-primary" className="px-4">CONTATO</Button>
+          <Button 
+            variant="outline-primary" 
+            className="px-4"
+            href="#contato"
+            onClick={(e) => handleSmoothScroll(e as unknown as React.MouseEvent<HTMLElement>, '#contato')}
+          >
+            CONTATO
+          </Button>
         </Navbar.Collapse>
       </Container>
     </Navbar>

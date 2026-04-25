@@ -36,13 +36,28 @@ body {
 }
 
 .section-shell {
-  padding: 4rem 0;
+  padding: 3rem 0;
+  @media (min-width: 768px) {
+    padding: 5rem 0;
+  }
 }
 
 .header-shell {
   background: rgba(11, 19, 38, 0.45);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(99, 247, 255, 0.12);
+}
+
+/* Responsividade de Menu Mobile */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background: rgba(11, 19, 38, 0.95);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    border: 1px solid rgba(99, 247, 255, 0.15);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  }
 }
 
 .brand-logo {
@@ -200,4 +215,42 @@ body {
   color: #63f7ff;
   filter: drop-shadow(0 0 8px rgba(99, 247, 255, 0.5));
   margin-bottom: 1rem;
+}
+
+/* Swiper Custom Styles */
+.swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.4) !important;
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background: #63f7ff !important;
+  box-shadow: 0 0 10px rgba(99, 247, 255, 0.8);
+  transform: scale(1.2);
+}
+
+/* Custom Cursor */
+@media (pointer: fine) {
+  body, a, button, input, textarea, .swiper-slide {
+    cursor: none !important;
+  }
+}
+
+.custom-cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background-color: #63f7ff;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Utils */
+.hover-opacity-100 {
+  &:hover {
+    opacity: 1 !important;
+  }
 }
