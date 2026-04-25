@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+html {
+  /* Scroll nativo desativado para uso do Framer Motion custom scroll */
+}
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -53,12 +57,11 @@ body {
   color: #63f7ff !important;
 }
 
-.placeholder-chart {
-  min-height: 320px;
+.hero-image {
   border-radius: 1rem;
-  background: linear-gradient(145deg, #0a192f, #0d223f);
   border: 1px solid rgba(99, 247, 255, 0.2);
   box-shadow: 0 0 30px rgba(0, 245, 255, 0.12);
+  object-fit: cover;
 }
 
 .vector-card {
@@ -83,7 +86,10 @@ body {
 
 .team-banner {
   width: 100%;
-  height: 220px;
+  height: 140px;
+  @media (min-width: 768px) {
+    height: 220px;
+  }
   border-radius: 1rem;
   background:
     linear-gradient(rgba(11, 19, 38, 0.45), rgba(11, 19, 38, 0.45)),
@@ -96,11 +102,20 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 1rem;
   height: 100%;
+  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.team-member:hover {
+  border-color: #63f7ff;
+  transform: translateY(-4px);
+  box-shadow: 0 0 15px rgba(0, 245, 255, 0.4);
 }
 
 .team-member-image {
-  width: 96px;
-  height: 96px;
+  width: 100%;
+  max-width: 96px;
+  aspect-ratio: 1/1;
+  height: auto;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid rgba(99, 247, 255, 0.5);
@@ -109,4 +124,80 @@ body {
 .footer-shell {
   background: rgba(6, 13, 28, 0.95);
   border-top: 1px solid rgba(99, 247, 255, 0.12);
+}
+
+// Ambient Background
+.ambient-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.ambient-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.4;
+}
+
+.orb-1 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(99,247,255,0.15) 0%, rgba(99,247,255,0) 70%);
+  top: -100px;
+  left: -100px;
+}
+
+.orb-2 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(91,42,134,0.15) 0%, rgba(91,42,134,0) 70%);
+  bottom: -150px;
+  right: -100px;
+}
+
+// Premium Buttons
+.btn-primary {
+  background: linear-gradient(135deg, #00f5ff 0%, #0088ff 100%) !important;
+  border: none !important;
+  color: #0b1326 !important;
+  font-weight: 600 !important;
+  box-shadow: 0 0 15px rgba(0, 245, 255, 0.3) !important;
+  transition: all 0.3s ease !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 245, 255, 0.6) !important;
+  color: #0b1326 !important;
+}
+
+.btn-outline-primary {
+  border: 1px solid rgba(99, 247, 255, 0.5) !important;
+  color: #63f7ff !important;
+  background: transparent !important;
+  transition: all 0.3s ease !important;
+  backdrop-filter: blur(5px);
+}
+
+.btn-outline-primary:hover {
+  background: rgba(99, 247, 255, 0.1) !important;
+  border-color: #63f7ff !important;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(99, 247, 255, 0.2) !important;
+  color: #63f7ff !important;
+}
+
+// Lucide Icons
+.vector-icon {
+  color: #63f7ff;
+  filter: drop-shadow(0 0 8px rgba(99, 247, 255, 0.5));
+  margin-bottom: 1rem;
 }

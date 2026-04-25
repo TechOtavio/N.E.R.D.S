@@ -1,41 +1,40 @@
 import { Col, Container, Row } from 'react-bootstrap'
+import { motion } from 'framer-motion'
 import VectorCard from '../components/VectorCard'
-
-const vectors = [
-  {
-    icon: '🧬',
-    title: 'Biometria Aplicada',
-    description: 'Soluções funcionais para rastreio e análise de sinais biométricos em contexto real.',
-    tags: ['Ação', 'Funcional', 'Sensores'],
-  },
-  {
-    icon: '🧠',
-    title: 'Neuroengenharia',
-    description: 'Pesquisa de interfaces cérebro-computador e processamento de sinais EEG de alta precisão.',
-    tags: ['BCI', 'EEG'],
-  },
-  {
-    icon: '🤖',
-    title: 'Inteligência Artificial',
-    description: 'Modelagem preditiva e Deep Learning para extração de insights em Big Data biomédico.',
-    tags: ['Deep Learning', 'Big Data'],
-  },
-]
+import { vectorsData } from '../data'
+import { containerVariants, itemVariants } from '../utils/animations'
 
 function VectorsSection() {
   return (
-    <section className="section-shell">
+    <section id="especialidades" className="section-shell">
       <Container>
-        <h2 className="text-white mb-4">
-          Vetores de <span className="text-primary">Atuação</span>
-        </h2>
-        <Row className="g-4">
-          {vectors.map((vector) => (
-            <Col key={vector.title} md={4}>
-              <VectorCard {...vector} />
-            </Col>
-          ))}
-        </Row>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+        >
+          <h2 className="text-white mb-4">
+            Áreas de <span className="text-primary">Atuação</span>
+          </h2>
+        </motion.div>
+        
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+        >
+          <Row className="g-4">
+            {vectorsData.map((vector) => (
+              <Col key={vector.title} md={4}>
+                <motion.div variants={itemVariants} className="h-100">
+                  <VectorCard {...vector} />
+                </motion.div>
+              </Col>
+            ))}
+          </Row>
+        </motion.div>
       </Container>
     </section>
   )
