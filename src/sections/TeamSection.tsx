@@ -1,13 +1,13 @@
 import { Col, Container, Row } from 'react-bootstrap'
 import TeamMember from '../components/TeamMember'
 import avatarJC from '../assets/avatar-jc.svg'
-import whatsappImg1 from '../assets/WhatsApp Image 2026-04-25 at 10.26.42 (1).jpeg'
+import avatarMV from '../assets/avatar-mv.svg'
 import whatsappImg2 from '../assets/avatar-as.svg'
 import whatsappImg3 from '../assets/avatar-cm.svg'
 
 const teamMembers = [
   {
-    image: whatsappImg1,
+    image: avatarMV,
     name: 'Marcos Vinicius',
     role: 'Cientista de Dados/Chefe',
   },
