@@ -11,7 +11,7 @@ function ContactSection() {
     setStatus('submitting');
     
     try {
-      const response = await fetch('https://formsubmit.co/ajax/otavio.holanda05@gmail.com', {
+      const response = await fetch('', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
